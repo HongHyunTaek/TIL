@@ -35,8 +35,11 @@ p string => # "hello" => "hello"
 ### 4. Naming conventions
 
 - 변수
+
   - snake_case
+
 - 상수
+
   - CONSTANT
 
 - 클래스
@@ -71,7 +74,7 @@ p string => # "hello" => "hello"
 
 ## 6. Inline statement
 
-``` ruby
+```ruby
 # if문
 puts "a=0" if a==0 
 # "a=0"
@@ -106,9 +109,47 @@ end
 
 
 
+## 8. method
+
+- 대부분의 언어
+  - 클래식 밖  : function
+  - 클래스 안 :  method
+- 루비에서는 모든 function은 method
+
+```ruby
+#루비에서의 method 선언
+def simple
+    puts"simples!!"
+end  
+
+# 루비에서의 method는 괄호를 선택적으로 사용 
+def asdf()
+	puts "asdf"
+end  
+```
+
+```ruby
+# 리턴이 없을경우에 마자막문장값을 리턴합니다.
+def add(a,b)
+	return a+b
+end  
+
+def add2(a,b)
+	a+b
+end  
+
+add 3,4
+=> 7
 
 
+#return을 선택적으로 사용할수가 있습니다.
+def divide(a,b)
+	return "I dont think so" if b == 0
+	 a/b
+end  
 
+
+```
 
 
 
