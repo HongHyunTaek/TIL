@@ -153,6 +153,66 @@ end
 
 
 
+- 기본 매개변수
+
+- ```ruby
+  def factorial(n)
+      n == 0 ? 1 : n * 
+      factorial(n-1)
+  end
+  
+  factorial # 에러 -> 매개변수 1개를 기대했으나 아무것도 주지않았다. 
+  
+  def factorial_d(n=5)
+      n == 0 ? 1 : n * factorial_d(n-1)
+  end
+  factorial_d #120
+  
+  ```
+
+## 9. BLOCK
+
+```ruby
+3.times do |asdf| # asdf에 인덱스 값을 넣어준다 
+ 	puts asdf
+ end  # do - end가 블럭임 
+
+3.times {puts "hello"}
+
+
+```
+
+```ruby
+ def hihi
+	 return "No block" unless block_given?
+	 yield
+end  
+
+hihi # => "No block"
+hihi {puts "hihi"} # hihi 
+
+```
+
+## 10.String
+
+
+
+```ruby
+a = "안녕하세요 \n 멋사입니다."
+b = '안녕하세요 \n 멋사입니다.'
+
+puts a 
+#안녕하세요
+#멋사입니다
+
+puts b
+#안녕하세요. \n 멋사입니다.
+
+name = "taek2"
+a = "#{name}님안녕하세요"
+b = '#{name}님안녕하세요'
+```
+
 
 
 
